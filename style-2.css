@@ -1,0 +1,37 @@
+/* Second Page - Home Page */
+
+#logout-btn {
+    display: inline-block;
+    border: none;
+    background-color: #FFC107;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #logout-btn:hover {
+    background-color: #FF9800;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #user-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  #user-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  #user-list li:hover {
+    background-color: #EEE;
+  }

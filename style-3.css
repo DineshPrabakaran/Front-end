@@ -1,0 +1,19 @@
+/* Third Page - Detailed userview */
+
+#logout-btn {
+  display: inline-block;
+  border: none;
+  background-color: #FFC107;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #FF9800;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}

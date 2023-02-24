@@ -1,0 +1,49 @@
+<!-- Second Page - Home Page-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link href="style-2.css" rel="stylesheet">
+  </head>
+  <body>
+    <button id="logout-btn">Logout</button>
+    <h1>Welcome to the Home page!</h1>
+    <p>Click on a user to see their details:</p>
+    <ul id="user-list"></ul>
+    
+    <!-- JavaScript code for fetching the details of user -->
+
+    <script>
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (!user) {
+        alert('Please enter your information before accessing this page.');
+        window.location.href = 'first-page.html';
+      }
+
+      const userList = document.getElementById('user-list');
+
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = user.name;
+            li.addEventListener('click', function() {
+              localStorage.setItem('selectedUser', JSON.stringify(user));
+              window.location.href = 'detailedview-page.html';
+            });
+            userList.appendChild(li);
+          });
+        });
+
+      const logoutBtn = document.getElementById('logout-btn');
+      logoutBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        localStorage.clear();
+        window.location.href = 'first-page.html';
+      });
+    </script>
+  
+</body>
+</html>
